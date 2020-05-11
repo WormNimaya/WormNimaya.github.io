@@ -1515,7 +1515,6 @@ blockquote footer cite:before {
 #article-container figure.highlight {
   position: relative;
   border-radius: 1px;
-  display: none;
 }
 #article-container figure.highlight pre {
   margin: 0;
