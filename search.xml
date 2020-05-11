@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Hexo</title>
+      <link href="/Hexo/"/>
+      <url>/Hexo/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技能 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 博客 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>vue-cli</title>
+      <link href="/vue-cli/"/>
+      <url>/vue-cli/</url>
+      
+        <content type="html"><![CDATA[<p>Vue.js 开发的标准工具</p><a id="more"></a><h2 id="vue-cli脚手架的安装"><a href="#vue-cli脚手架的安装" class="headerlink" title="vue-cli脚手架的安装"></a>vue-cli脚手架的安装</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install -g @vue/cli</span><br><span class="line"># OR</span><br><span class="line">yarn global add @vue/cli</span><br></pre></td></tr></table></figure><hr><h2 id="创建一个项目"><a href="#创建一个项目" class="headerlink" title="创建一个项目"></a>创建一个项目</h2><p><code>vue create hello-world</code></p><hr><h3 id="项目搭建过程"><a href="#项目搭建过程" class="headerlink" title="项目搭建过程"></a>项目搭建过程</h3><ul><li>过程一<br><img src="../image/vuecli1.png" alt=""></li></ul><ol><li><p>Please pick a preset: (Use arrow keys) preset是之前预设过的配置(如果没有选择下面两个选项, 如果有选择直接安装)enter</p></li><li><p>default (babel, eslint): 默认配置(直接enter)非常适合快速创建一个新的项目的原型, 但是没有带任何辅助功能的npm包</p></li><li><p>Manually select feature: 手动配置(按下方向键↓调换选项)是我们所需要的面向生产的项目，提供可选择的npm包</p></li></ol><ul><li>过程二(方向键↑和↓进行切换，空格键进行确定)<br><img src="../image/vuecli2.png" alt=""></li></ul><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">? Please pick a preset: Manually select features</span><br><span class="line">? Check the features needed <span class="keyword">for</span> your project: (Press &lt;space&gt; to select, &lt;a&gt; to toggle all, &lt;i&gt; to invert selection)</span><br><span class="line">&gt;(*) Babel  <span class="comment">// Babel 是一个 JavaScript 编译器</span></span><br><span class="line"> ( ) TypeScript <span class="comment">// javaScript的超集</span></span><br><span class="line"> ( ) Progressive Web App (PWA) Support <span class="comment">// 渐变式web应用程序</span></span><br><span class="line"> ( ) Router <span class="comment">// vue-router(vue路由)</span></span><br><span class="line"> ( ) Vuex <span class="comment">// vuex(vue的状态管理模式)</span></span><br><span class="line"> ( ) CSS Pre-processors <span class="comment">// css 预处理器</span></span><br><span class="line"> (*) Linter / Formatter <span class="comment">// 代码风险检测和格式化(如：Eslnt)</span></span><br><span class="line"> ( ) Unit Testing <span class="comment">// 单元测试</span></span><br><span class="line"> ( ) E2E Testing <span class="comment">// e2e测试</span></span><br></pre></td></tr></table></figure><ol><li>Router<br><img src="../image/vuecli3.png" alt=""></li></ol><p>+ </p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
