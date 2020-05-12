@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>vue</title>
+      <link href="/vue/"/>
+      <url>/vue/</url>
+      
+        <content type="html"><![CDATA[<h2 id="vue是什么？"><a href="#vue是什么？" class="headerlink" title="vue是什么？"></a>vue是什么？</h2><ol><li><p>Vue是一套构建用户界面的渐进式框架，也是一个非常典型的 MVVM 的程序结构（model-view-viewmodel）。</p></li><li><p>官方解释：Vue (读音 /vjuː/，类似于 view) 是一套用于构建用户界面的渐进式框架。与其它大型框架不同的是，Vue 被设计为可以自底向上逐层应用。Vue 的核心库只关注视图层，不仅易于上手，还便于与第三方库或既有项目整合。</p><ul><li>渐变式框架：你可以把vue用在已经有的项目中，进行页面的渲染，也可以利用vue的全家桶创建大型项目,vue不是把所有东西集成在一起，而是你需要什么，在vue中添加相应的工具(例如vue-resource,vuex)，vue实现是加法操作</li><li>MVC: 是后端(node.js)的程序结构，M是model的缩写代表数据层，V是view的缩写代表视图层，C是controller的缩写代表逻辑层</li><li>MVVM: 是前端的程序结构，是MVC中的V进一步划分，M是每一个页面的单独数据，V是每个页面的html结构，VM是页面的调度者，MVVM 是Model-View-ViewModel 的缩写，它是一种基于前端开发的架构模式，其核心是提供对View 和 Model 的双向数据绑定，这使得Model 的状态改变可以自动传递给 View，即所谓的<code>数据双向绑定</code>。<br><img src="../image/vue1.png" alt=""></li><li>自底向上逐层应用：由基层开始做起，把基础的东西写好，再逐层往上添加效果和功能。</li></ul><hr></li></ol><h2 id="vue的安装"><a href="#vue的安装" class="headerlink" title="vue的安装"></a>vue的安装</h2><ol><li><p>vue的兼容性</p><ul><li>Vue 不支持 IE8 及以下版本，因为 Vue 使用了 IE8 无法模拟的 ECMAScript 5 特性。但它支持所有兼容   ECMAScript 5 的浏览器</li></ul></li><li><p>Vue Detools</p><ul><li>在使用 Vue 时，我们推荐在你的浏览器上安装 <a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">Vue Detools</a>。它允许你在一个更友好的界面中审查和调试 Vue 应用。</li></ul></li><li><p>直接<code>&lt;script&gt;</code>引入</p><ul><li><p>直接下载并用 <code>&lt;script&gt;</code>标签引入，Vue 会被注册为一个全局变量。</p><blockquote><p>注意：在开发环境下不要使用压缩版本，不然你就失去了所有常见错误相关的警告!</p></blockquote></li><li><p>csdn<br>对于制作原型或学习，你可以这样使用最新版本：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"https://cdn.jsdelivr.net/npm/vue/dist/vue.js"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure><p>对于生产环境，我们推荐链接到一个明确的版本号和构建文件，以避免新版本造成的不可预期的破坏：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">script src=<span class="string">"https://cdn.jsdelivr.net/npm/vue@2.6.11"</span>&gt;&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure></li><li><p>NPM<br>在用 Vue 构建大型应用时推荐使用 NPM 安装。NPM 能很好地和诸如 webpack 或 Browserify 模块打包器配合使用。同时 Vue 也提供配套工具来开发单文件组件。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"># 最新稳定版</span><br><span class="line">$ npm install vue</span><br></pre></td></tr></table></figure></li><li><p>命令行工具(CLI)</p><blockquote><p>vue 提供了一个官方的 CLI，为单页面应用 (SPA) 快速搭建繁杂的脚手架。它为现代前端工作流提供了     batteries-included 的构建设置。只需要几分钟的时间就可以运行起来并带有热重载、保存时 lint 校验，以 及生产环境可用的构建版本。更多详情可查阅 Vue CLI 的文档。</p></blockquote></li></ul></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Hexo</title>
       <link href="/Hexo/"/>
       <url>/Hexo/</url>
