@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>git</title>
+      <link href="/git/"/>
+      <url>/git/</url>
+      
+        <content type="html"><![CDATA[<h2 id="git的安装"><a href="#git的安装" class="headerlink" title="git的安装"></a>git的安装</h2><p> <a href="https://www.runoob.com/git/git-install-setup.html" target="_blank" rel="noopener">linux/Mac的方法</a><br> 在 Windows 平台上安装 Git 同样轻松，有个叫做 msysGit 的项目提供了安装包，可以到 GitHub 的页面上下载 exe 安装文件并运行：<br> <a href="https://gitforwindows.org/" target="_blank" rel="noopener">下载地址</a><br> <img src="https://oscimg.oschina.net/oscnet/118701a4510c201f74f1d78f0e06d618ca4.jpg" alt=""><br> 傻瓜式下一步，完成安装之后，就可以使用命令行的 git 工具（已经自带了 ssh 客户端）了，另外还有一个图形界面的 Git 项目管理工具。在开始菜单里找到”Git”-&gt;”Git Bash”，会弹出 Git 命令窗口，你可以在该窗口进行 Git 操作。</p><h2 id="git配置"><a href="#git配置" class="headerlink" title="git配置"></a>git配置</h2><ol><li><p>用户信息<br>配置个人的用户名称和电子邮件地址：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ git config --global user.name &quot;runoob&quot;</span><br><span class="line">$ git config --global user.email test@runoob.com</span><br></pre></td></tr></table></figure><p>如果用了 –global 选项，那么更改的配置文件就是位于你用户主目录下的那个，以后你所有的项目都会默认使用这里配置的用户信息。如果要在某个特定的项目中使用其他名字或者电邮，只要去掉 –global 选项重新配置即可，新的设定保存在当前项目的 .git/config 文件里。</p></li><li><p>查看git配置</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --list</span><br></pre></td></tr></table></figure></li><li><p>git免密码登录<br>登录一次密码后，用下面命令行记住密码</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global credential.helper store</span><br></pre></td></tr></table></figure></li></ol><h2 id="vscode中使用git"><a href="#vscode中使用git" class="headerlink" title="vscode中使用git"></a>vscode中使用git</h2><ol><li><p>vscode中进行git配置<br>在vscode中点击文件 -&gt; 首选项 -&gt; 设置 -&gt; 在搜索栏中搜索git.path -&gt; 打开下方的setting.json文件填写如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&quot;git.path&quot;: &quot;git.exe所在目录地址&quot;</span><br></pre></td></tr></table></figure></li><li><p>vscode中添加插件 Git History Diff</p></li><li><p>在vscode的操做git</p><ul><li>上传到github<br><img src="../image/git1.png" alt=""><br><img src="../image/git2.png" alt=""></li><li>创建分支<br><img src="../image/git3.png" alt=""><br><img src="../image/git4.png" alt=""><br><img src="../image/git5.png" alt=""></li></ul></li><li><p>合并分支<br>把分支合并过来</p><ul><li>切换到想合并别人的分支上，按下键盘crtl+ shift + p, 选择合并分支，选择要合并的分支<br><img src="../image/git8.png" alt=""><br><img src="../image/git6.png" alt=""><br><img src="../image/git7.png" alt=""><br><img src="../image/git9.png" alt=""></li></ul></li><li><p>冲突</p><ul><li>当我们提交遇到冲突时<br><img src="../image/git10.png" alt=""><br>解决后在进行提交</li></ul></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>nvm</title>
+      <link href="/nvm/"/>
+      <url>/nvm/</url>
+      
+        <content type="html"><![CDATA[<h2 id="nvm的安装"><a href="#nvm的安装" class="headerlink" title="nvm的安装"></a>nvm的安装</h2><p>  <a href="https://juejin.im/post/5d89cf27f265da0390057013" target="_blank" rel="noopener">文章转自</a><br>  如果你想长期做 node 开发, 或者想快速更新 node 版本, 或者想快速切换 node 版本,那就使用 nvm 来安装你的 node 开发环境, 保持系统的干净.<br>  <a href="https://github.com/coreybutler/nvm-windows/releases" target="_blank" rel="noopener">nvm下载地址</a><br>  window用户直接选择 nvm-setup.zip 下载安装</p><blockquote><p>如果本地已经安装了node，要先卸载node再安装nvm</p></blockquote>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">$ nvm -v &#x2F;&#x2F;检查nvm是否安装成功, 如果出现下面的命令，安装完成</span><br><span class="line">&#x2F;*</span><br><span class="line">Running version 1.1.7.</span><br><span class="line"></span><br><span class="line">Usage:</span><br><span class="line"></span><br><span class="line">  nvm arch                     : Show if node is running in 32 or 64 bit mode.</span><br><span class="line">  nvm install &lt;version&gt; [arch] : The version can be a node.js version or &quot;latest&quot; for the latest stable version.</span><br><span class="line">                                Optionally specify whether to install the 32 or 64 bit version (defaults to system arch).</span><br><span class="line">                                Set [arch] to &quot;all&quot; to install 32 AND 64 bit versions.</span><br><span class="line">                                Add --insecure to the end of this command to bypass SSL validation of the remote download server.</span><br><span class="line">  nvm list [available]         : List the node.js installations. Type &quot;available&quot; at the end to see what can be installed. Aliased as ls.</span><br><span class="line">  nvm on                       : Enable node.js version management.</span><br><span class="line">  nvm off                      : Disable node.js version management.</span><br><span class="line">  nvm proxy [url]              : Set a proxy to use for downloads. Leave [url] blank to see the current proxy.</span><br><span class="line">                                Set [url] to &quot;none&quot; to remove the proxy.</span><br><span class="line">  nvm node_mirror [url]        : Set the node mirror. Defaults to https:&#x2F;&#x2F;nodejs.org&#x2F;dist&#x2F;. Leave [url] blank to use default url.</span><br><span class="line">  nvm npm_mirror [url]         : Set the npm mirror. Defaults to https:&#x2F;&#x2F;github.com&#x2F;npm&#x2F;cli&#x2F;archive&#x2F;. Leave [url] blank to default url.</span><br><span class="line">  nvm uninstall &lt;version&gt;      : The version must be a specific version.</span><br><span class="line">  nvm use [version] [arch]     : Switch to use the specified version. Optionally specify 32&#x2F;64bit architecture.</span><br><span class="line">                                nvm use &lt;arch&gt; will continue using the selected version, but switch to 32&#x2F;64 bit mode.</span><br><span class="line">  nvm root [path]              : Set the directory where nvm should store different versions of node.js.</span><br><span class="line">                                If &lt;path&gt; is not set, the current root will be displayed.</span><br><span class="line">  nvm version                  : Displays the current running version of nvm for Windows. Aliased as v.</span><br><span class="line">*&#x2F;</span><br></pre></td></tr></table></figure><h2 id="使用nvm安装node"><a href="#使用nvm安装node" class="headerlink" title="使用nvm安装node"></a>使用nvm安装node</h2>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> nvm -h //查看nvm的指令</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> nvm list //查看本地已经安装的node版本列表</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> nvm list available //查看可以安装的node版本</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> nvm install latest //安装最新版本的node</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> nvm install [version][arch] //安装指定版本的node 例如：nvm install 10.16.3 安装node v10.16.3 arch表示电脑的位数 如果电脑需要安装32位的， 则运行：nvm install 10.16.3 32</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> nvm use [version] //使用node 例如：nvm use 10.16.3</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> nvm uninstall [version] //卸载node</span></span><br></pre></td></tr></table></figure><h2 id="镜像设置"><a href="#镜像设置" class="headerlink" title="镜像设置"></a>镜像设置</h2><p> 在使用nvm安装node的过程中如果速度太慢的话，可以设置改用淘宝的镜像地址在nvm安装目录下的setting.txt文件中加入以下代码<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">node_mirror: https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;node&#x2F;</span><br><span class="line">npm_mirror: https:&#x2F;&#x2F;npm.taobao.org&#x2F;mirrors&#x2F;npm&#x2F;</span><br></pre></td></tr></table></figure></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> node.js </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>async和await</title>
       <link href="/async%E5%92%8Cawait/"/>
       <url>/async%E5%92%8Cawait/</url>
