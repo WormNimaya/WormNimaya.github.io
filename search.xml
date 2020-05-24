@@ -4,6 +4,56 @@
   
     
     <entry>
+      <title>mongodb</title>
+      <link href="/mongodb/"/>
+      <url>/mongodb/</url>
+      
+        <content type="html"><![CDATA[<h2 id="mongodb数据库的安装"><a href="#mongodb数据库的安装" class="headerlink" title="mongodb数据库的安装"></a>mongodb数据库的安装</h2><ol><li><a href="https://www.mongodb.com/download-center/community" target="_blank" rel="noopener">官方下载地址</a></li><li>安装步骤<br><img src="https://img-blog.csdnimg.cn/20190627141817698.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dpbGxpYW1fbXVuY2g=,size_16,color_FFFFFF,t_70" alt=""><br>这里我安装在C盘了，想改盘符的请自行百度<br><img src="https://img-blog.csdnimg.cn/20190627141927387.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dpbGxpYW1fbXVuY2g=,size_16,color_FFFFFF,t_70" alt=""><br><img src="https://mongoing.com/wp-content/uploads/2019/04/2.png" alt=""><br>下一步安装 “install mongoDB compass” 不勾选（当然你也可以选择安装它，可能需要更久的安装时间），MongoDB Compass 是一个图形界面管理工具，我们可以在后面自己到官网下载安装，下载地址：<a href="https://www.mongodb.com/download-center/compass。" target="_blank" rel="noopener">https://www.mongodb.com/download-center/compass。</a><br><img src="https://www.runoob.com/wp-content/uploads/2013/10/8F7AF133-BE49-4BAB-9F93-88A9D666F6C0.jpg" alt=""></li><li>配置环境变量<ul><li>找到mongodb中的bin文件夹复制路径，把复制的路径粘贴到环境变量的path中</li></ul></li><li>配置mongodb<ul><li>在c盘建一个data文件夹，在data文件夹中建一个db文件夹(这个文件以后会存储数据库)</li></ul></li><li>测试安装是否成功<br>在cmd命令行中输入mongo -&gt; db -&gt; test 出现下面界面证明配置成功<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">PS C:\Users\33448&gt; mongo</span><br><span class="line">MongoDB shell version v4.2.6</span><br><span class="line">connecting to: mongodb:&#x2F;&#x2F;127.0.0.1:27017&#x2F;?compressors&#x3D;disabled&amp;gssapiServiceName&#x3D;mongodb</span><br><span class="line">Implicit session: session &#123; &quot;id&quot; : UUID(&quot;129b3153-3c59-4048-a7e9-aa447d3aa587&quot;) &#125;</span><br><span class="line">MongoDB server version: 4.2.6</span><br><span class="line">Server has startup warnings:</span><br><span class="line">2020-05-24T08:05:05.788+0800 I  CONTROL  [initandlisten]</span><br><span class="line">2020-05-24T08:05:05.788+0800 I  CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.</span><br><span class="line">2020-05-24T08:05:05.788+0800 I  CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.</span><br><span class="line">2020-05-24T08:05:05.788+0800 I  CONTROL  [initandlisten]</span><br><span class="line">---</span><br><span class="line">Enable MongoDB&#39;s free cloud-based monitoring service, which will then receive and display</span><br><span class="line">metrics about your deployment (disk utilization, CPU, operation statistics, etc).</span><br><span class="line"></span><br><span class="line">The monitoring data will be available on a MongoDB website with a unique URL accessible to you</span><br><span class="line">and anyone you share the URL with. MongoDB may use this information to make product</span><br><span class="line">improvements and to suggest MongoDB products and deployment options to you.</span><br><span class="line"></span><br><span class="line">To enable free monitoring, run the following command: db.enableFreeMonitoring()</span><br><span class="line">To permanently disable this reminder, run the following command: db.disableFreeMonitoring()</span><br><span class="line">---</span><br><span class="line"></span><br><span class="line">&gt; db</span><br><span class="line">test</span><br><span class="line">&gt;</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 数据库 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>本地配置easy-mock</title>
+      <link href="/%E6%9C%AC%E5%9C%B0%E9%85%8D%E7%BD%AEeasy-mock/"/>
+      <url>/%E6%9C%AC%E5%9C%B0%E9%85%8D%E7%BD%AEeasy-mock/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p> <img src="https://img-blog.csdnimg.cn/2019062709583191.png" alt=""></p><blockquote><p>这里我用的node.js是8.9.0</p></blockquote><h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2><p> 这个很简单直接<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener">官方直接下载</a>，直接下一步，下一步傻瓜式安装，这里建议使用node(8.9.0)</p><h2 id="安装mongodb"><a href="#安装mongodb" class="headerlink" title="安装mongodb"></a>安装mongodb</h2><p> 可以借鉴我的<a href="">另一篇文章</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 模拟数据 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vuecli3代理跨域</title>
       <link href="/vuecli3%E4%BB%A3%E7%90%86%E8%B7%A8%E5%9F%9F/"/>
       <url>/vuecli3%E4%BB%A3%E7%90%86%E8%B7%A8%E5%9F%9F/</url>
