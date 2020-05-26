@@ -4,6 +4,186 @@
   
     
     <entry>
+      <title>storage的封装</title>
+      <link href="/storage%E7%9A%84%E5%B0%81%E8%A3%85/"/>
+      <url>/storage%E7%9A%84%E5%B0%81%E8%A3%85/</url>
+      
+        <content type="html"><![CDATA[<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span>  STORAGE_KEY = <span class="string">'mall'</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span>&#123;</span><br><span class="line">  <span class="comment">// 存储值</span></span><br><span class="line">  setItem(key,value,module_name)&#123;</span><br><span class="line">    <span class="keyword">if</span> (module_name)&#123;</span><br><span class="line">      <span class="keyword">let</span> val = <span class="keyword">this</span>.getItem(module_name);</span><br><span class="line">      val[key] = value;</span><br><span class="line">      <span class="keyword">this</span>.setItem(module_name, val);</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">      <span class="keyword">let</span> val = <span class="keyword">this</span>.getStorage();</span><br><span class="line">      val[key] = value;</span><br><span class="line">      <span class="built_in">window</span>.sessionStorage.setItem(STORAGE_KEY, <span class="built_in">JSON</span>.stringify(val));</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="comment">// 获取某一个模块下面的属性user下面的userName</span></span><br><span class="line">  getItem(key,module_name)&#123;</span><br><span class="line">    <span class="keyword">if</span> (module_name)&#123;</span><br><span class="line">      <span class="keyword">let</span> val = <span class="keyword">this</span>.getItem(module_name);</span><br><span class="line">      <span class="keyword">if</span>(val) <span class="keyword">return</span> val[key];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">this</span>.getStorage()[key];</span><br><span class="line">  &#125;,</span><br><span class="line">  getStorage()&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">JSON</span>.parse(<span class="built_in">window</span>.sessionStorage.getItem(STORAGE_KEY) || <span class="string">'&#123;&#125;'</span>);</span><br><span class="line">  &#125;,</span><br><span class="line">  clear(key, module_name)&#123;</span><br><span class="line">    <span class="keyword">let</span> val = <span class="keyword">this</span>.getStorage();</span><br><span class="line">    <span class="keyword">if</span> (module_name)&#123;</span><br><span class="line">      <span class="keyword">if</span> (!val[module_name])<span class="keyword">return</span>;</span><br><span class="line">      <span class="keyword">delete</span> val[module_name][key];</span><br><span class="line">    &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">      <span class="keyword">delete</span> val[key];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">window</span>.sessionStorage.setItem(STORAGE_KEY, <span class="built_in">JSON</span>.stringify(val));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>cookie没有消失之谜</title>
+      <link href="/cookie%E6%B2%A1%E6%9C%89%E6%B6%88%E5%A4%B1%E4%B9%8B%E8%B0%9C/"/>
+      <url>/cookie%E6%B2%A1%E6%9C%89%E6%B6%88%E5%A4%B1%E4%B9%8B%E8%B0%9C/</url>
+      
+        <content type="html"><![CDATA[<p><strong>在谷歌浏览器设置了会话cookie，关闭浏览器会话cookies还在，这是为什么那？</strong></p><ul><li>chrome浏览器的设置是“从上次停下的地方继续”。也就是说我关闭之后再打开会回到关闭之前的状态。</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> cookie </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>cookie、storage与session之间的区别</title>
+      <link href="/cookie%E3%80%81storage%E4%B8%8Esession%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB/"/>
+      <url>/cookie%E3%80%81storage%E4%B8%8Esession%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB/</url>
+      
+        <content type="html"><![CDATA[<table align="center"> <tr>  <td></td>  <td>cookie</td>  <td>localStorage</td>  <td>sessionStorage</td>  <td>session</td> </tr> <tr>  <td>存储方式</td>  <td colspan="4">都是key-value存储、同域名可用</td> </tr> <tr>  <td>存储位置</td>  <td>会话cookie储存在浏览器中、持久cookie储存在本地硬盘中</td>  <td>储存在本地硬盘中</td>  <td>储存在浏览器</td>  <td>服务端</td> </tr> <tr>  <td>特点</td>  <td>随请求头每次都进行提交</td>  <td>不随请求头提交，可长时间储存</td>  <td>不随请求头提交，页面关闭即失效</td>  <td>安全</td> </tr> <tr>  <td>是否可以跨页和跨域</td>  <td colspan="2">可跨页，不可跨域</td>  <td>不可跨页，不可跨域</td>  <td>可跨页，不可跨域</td> </tr></table>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> cookie </tag>
+            
+            <tag> storage </tag>
+            
+            <tag> session </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>cookie</title>
+      <link href="/cookie/"/>
+      <url>/cookie/</url>
+      
+        <content type="html"><![CDATA[<p>文章转自下面两篇文章<br><a href="https://juejin.im/post/5cbf0749e51d456e781f2023" target="_blank" rel="noopener">3分钟搞懂Cookie与Session</a><br><a href="https://www.jianshu.com/p/e66627122a3e" target="_blank" rel="noopener">本地存储之cookie和storage</a></p><h2 id="cookie存在的意义"><a href="#cookie存在的意义" class="headerlink" title="cookie存在的意义"></a>cookie存在的意义</h2><p>在这咱们就拿一个简单的登录来说，当用户来到我们的登录页面，输入用户名与密码后点击“登录”按钮之后，浏览器将页面上的认证信息通过POST给我们的服务器，当验证通过后，浏览器就会跳转到我们的主页面</p><p>那登录成功之后，我们的服务器又该如何验证用户在别的页面的访问权限呢？因为HTTP协议是无状态的，所以我们的服务器根本就没办法辨别刚刚验证通过的用户，现在发起的请求是不是通过了验证。</p><p>而我们又不能因为HTTP无状态，让用户在每次发起请求的时候，都要输一次账号密码验证，要真这样搞，我想咱家的网站距离倒闭的日子，指日可待啊</p><p>那总得想办法解决吧，最简单的方案就是所有的请求里都带上用户名与密码，虽然可行，但是大大的加大了我们服务器的负担，这回咱家公司是买服务器买倒闭的。。。<br>那么只要客户端或者服务器中保存着可以代表身份的信息，那这样我们就不需要每次都验证用户名与密码了，有了这个身份信息，我们就可以辨别，发起请求的用户是不是已经通过验证了，这就有了Cookie</p><p>总结： 因为Http协议无状态，在需要识别状态的时候，需要借助外力来辨别，而这个外力就是Cookie</p><h2 id="什么是cookie"><a href="#什么是cookie" class="headerlink" title="什么是cookie"></a>什么是cookie</h2><p> Cookie是存储在用户本地计算机上，用于保存一些用户操作的历史信息，当用户再次访问我们的服务器的时候，浏览器通过HTTP协议，将他们本地的Cookie内容也发到咱们服务器上，从而完成验证</p><p> Cookie又分为了会话Cookie与持久Cookie，要区分这两种类型，非常的简单，持久Cookie就是我们设置了它的过期时间，而没设置过期时间的，都属于会话Cookie，会话Cookie，当浏览器关闭后将会丢失，事实上这些cookie仅存储在内存中，而没有建立相应的硬盘文件。</p><h2 id="cookie的特点"><a href="#cookie的特点" class="headerlink" title="cookie的特点"></a>cookie的特点</h2><ul><li>cookie可能被禁用，当用户非常注重个人隐私保护时，他很可能禁用浏览器的cookie功能</li><li>发送http请求时会把cookie放在请求头中，服务器通过cookie来了解客户端状态</li><li>大小限制4k左右，低版本浏览器会有数量的限制</li><li>可以设置有效时间，超过时间就会消失</li><li>安全性不够高，所有的cookie都是以纯文本形式记录与文件中，因此保存用户名和密码等重要信息最好事先加密处理</li><li>有路径的概念，可以限制cookie在某个路径下</li><li>在同源窗口中都是共享的</li><li>cookie是与浏览器相关的，即使是同一个页面，不同浏览器之间所保存cookie的也不能相互访问的</li><li>每个cookie都是硬盘上的一个文件，因此很可能被用户删除</li></ul><h2 id="cookie使用"><a href="#cookie使用" class="headerlink" title="cookie使用"></a>cookie使用</h2><ol><li><p>设置cookie:</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">document.cookie &#x3D; &quot;name&#x3D;aimi; age&#x3D;20;&quot;  &#x2F;* 存储多个名&#x2F;值对，用分号加空格（; ）隔开 *&#x2F;</span><br><span class="line"></span><br><span class="line">document.cookie&#x3D;&quot;str&#x3D;&quot;+escape(&quot;I love ajax&quot;); &#x2F;&#x2F; 使用escape()函数</span><br></pre></td></tr></table></figure></li><li><p>获取cookie:<br><strong>在cookie的名/值中不能使用分号、逗号、等号以及空格。</strong><br>在cookie的名中做到很容易，但在保存的值中是不确定的，所以用escape()函数进行编码，它能将一些特殊符号使用十六进制表示，例如空格将会编码为“20%”，从而可以存储cookie值中，而且使用此种方案还可以避免中文乱码的出现。在取出值后用unescape()进行解码就可以得到原来保存的值。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var strCookie &#x3D; document.cookie;</span><br><span class="line"></span><br><span class="line">var strCookie &#x3D; unescape(document.cookie); &#x2F;&#x2F; unescape()进行解码</span><br></pre></td></tr></table></figure></li><li><p>设置保存有效期：<br>没有设置时间的cookie都是单会话，当浏览器关闭后将会丢失，事实上这些cookie仅存储在内存中，而没有建立相应的硬盘文件。<br><strong>格式：document.cookie = “name=value; expiress=GMT_String”; /* GMT_String 是以GMT格式表示的时间字符串</strong></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var expiresDays &#x3D; 30; &#x2F;* 30天之后过期 *&#x2F;</span><br><span class="line">var data &#x3D; new Date().getTime()+expiresDays*24*3600*1000；</span><br><span class="line">document.cookie &#x3D; &quot;name&#x3D;aimi; expires&#x3D;&quot; + date.toGMTString();</span><br></pre></td></tr></table></figure></li><li><p>删除有效期cookie:<br>为了删除一个cookie，可以将其过期时间设定为一个过去的时间。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var date&#x3D;new Date();  &#x2F;&#x2F;获取当前时间</span><br><span class="line">date.setTime(date.getTime()-10000);  &#x2F;&#x2F;将date设置为过去的时间</span><br><span class="line">document.cookie&#x3D;&quot;userId&#x3D;828; expires&#x3D;&quot;+date.toGMTString(); &#x2F;&#x2F;将userId这个cookie删除</span><br></pre></td></tr></table></figure></li><li><p>指定cookie可访问的路径：</p><ul><li>默认情况下，如果在某个页面创建一个cookie,那么该页面所在目录中的其他页面也可以访问该cookie,如果这个目录下还有子目录，则在子目录中也可以访问。例如在<a href="http://www.xxxx.com/html/a.html中所创建的cookie，可以被www.xxxx.com/html/b.html或" target="_blank" rel="noopener">www.xxxx.com/html/a.html中所创建的cookie，可以被www.xxxx.com/html/b.html或</a> <a href="http://www.xxx.com/" target="_blank" rel="noopener">www.xxx.com/</a> html/ some/c.html所访问，但不能被<a href="http://www.xxxx.com/d.html访问。" target="_blank" rel="noopener">www.xxxx.com/d.html访问。</a></li><li>为了控制cookie可访问的目录，需要使用path参数设置cookie,<br>doment.cookie = “name=value; path=cookieDir”; 其中cookieDir表示可访问cookie的目录。例如：document.cookie=”userId=320; path=/shop”;就表示当前cookie仅能在shop目录下使用。<br>如果要使cookie在整个网站下可用，可以将cookie_dir指定为根目录。</li></ul></li><li><p>指定可访问cookie的主机名：<br>和 路径类似，主机名是指同一个域下的不同主机，例如：<a href="http://www.google.com和gmail.google.com就是两个不同的主机名。默认情况下，" target="_blank" rel="noopener">www.google.com和gmail.google.com就是两个不同的主机名。默认情况下，</a> 一个主机中创建的cookie在另一个主机下是不能被访问的，但可以通过domain参数来实现对其的控制，其语法格式为：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.cookie&#x3D;&quot;name&#x3D;value; domain&#x3D;cookieDomain&quot;;</span><br></pre></td></tr></table></figure><p>以google为例，要实现跨主机访问，可以写为：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.cookie&#x3D;&quot;name&#x3D;value;domain&#x3D;.google.com&quot;;</span><br></pre></td></tr></table></figure><p>这样，所有google.com下的主机都可以访问该cookie。</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> cookie </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>本地存储</title>
+      <link href="/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8/"/>
+      <url>/%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8/</url>
+      
+        <content type="html"><![CDATA[<p>随着互联网的快速发展，基于网页的应用越来越普遍，同时也变的越来越复杂，为了满足各种各样的需求，会经常性在本地存储大量的数据，HTML5规范提出了相关解决方案。</p><h2 id="本地存储特性"><a href="#本地存储特性" class="headerlink" title="本地存储特性"></a>本地存储特性</h2><ol><li>数据存储在用户浏览器中</li><li>设置、读取方便、甚至页面刷新不丢失数据</li><li>容量较大，sessionStorage约5M、localStorage约20M</li><li>只能存储字符串，可以将对象JSON.stringify() 编码后存储</li></ol><h2 id="window-sessionStorage"><a href="#window-sessionStorage" class="headerlink" title="window.sessionStorage"></a>window.sessionStorage</h2><ol><li>生命周期为关闭浏览器窗口</li><li>在同一个窗口(页面)下数据可以共享</li><li>以键值对的形式存储使用<br>存储数据：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sessionStorage.setItem(key, value)</span><br></pre></td></tr></table></figure>获取数据：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sessionStorage.getItem(key)</span><br></pre></td></tr></table></figure>删除数据：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sessionStorage.removeItem(key)</span><br></pre></td></tr></table></figure>清空数据：(所有都清除掉)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sessionStorage.clear()</span><br></pre></td></tr></table></figure></li></ol><h2 id="window-localStorage"><a href="#window-localStorage" class="headerlink" title="window.localStorage"></a>window.localStorage</h2><ol><li>声明周期永久生效，除非手动删除 否则关闭页面也会存在</li><li>可以多窗口（页面）共享（同一浏览器可以共享）</li><li>以键值对的形式存储使用<br>存储数据：<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">localStorage.setItem(key, value)</span><br></pre></td></tr></table></figure>获取数据：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">localStorage.getItem(key)</span><br></pre></td></tr></table></figure>删除数据：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">localStorage.removeItem(key)</span><br></pre></td></tr></table></figure>清空数据：(所有都清除掉)<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">localStorage.clear()</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> storage </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>vue的命名视图</title>
+      <link href="/vue%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%86%E5%9B%BE/"/>
+      <url>/vue%E7%9A%84%E5%91%BD%E5%90%8D%E8%A7%86%E5%9B%BE/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://router.vuejs.org/zh/guide/essentials/named-views.html" target="_blank" rel="noopener">官方文档</a></p><blockquote><p>注意：components 不要写成 component</p></blockquote>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>vue-router的name属性</title>
+      <link href="/vue-router%E7%9A%84name%E5%B1%9E%E6%80%A7/"/>
+      <url>/vue-router%E7%9A%84name%E5%B1%9E%E6%80%A7/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://router.vuejs.org/zh/guide/essentials/named-routes.html" target="_blank" rel="noopener">官方文档</a></p><h2 id="命名路由"><a href="#命名路由" class="headerlink" title="命名路由"></a>命名路由</h2><p>有时候，通过一个名称来标识一个路由显得更方便一些，特别是在链接一个路由，或者是执行一些跳转的时候。你可以在创建 Router 实例的时候，在 routes 配置中给某个路由设置名称。</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VueRouter(&#123;</span><br><span class="line">  routes: [</span><br><span class="line">    &#123;</span><br><span class="line">      path: <span class="string">'/user/:userId'</span>,</span><br><span class="line">      name: <span class="string">'user'</span>,</span><br><span class="line">      component: User</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure><ol><li>要链接到一个命名路由，可以给 router-link 的 to 属性传一个对象：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;router-link :to&#x3D;&quot;&#123; name: &#39;user&#39;, params: &#123; userId: 123 &#125;&#125;&quot;&gt;User&lt;&#x2F;router-link&gt;</span><br></pre></td></tr></table></figure></li><li>可以用name传参 使用$router.name获取路由的name值<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;Current route name: &#123;&#123; $route.name &#125;&#125;&lt;&#x2F;p&gt;</span><br></pre></td></tr></table></figure></li><li>这跟代码调用 router.push() 是一回事：<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">router.push(&#123; name: &#39;user&#39;, params: &#123; userId: 123 &#125;&#125;)</span><br></pre></td></tr></table></figure>这两种方式都会把路由导航到 /user/123 路径。</li></ol><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Vue <span class="keyword">from</span> <span class="string">'vue'</span></span><br><span class="line"><span class="keyword">import</span> VueRouter <span class="keyword">from</span> <span class="string">'vue-router'</span></span><br><span class="line"></span><br><span class="line">Vue.use(VueRouter)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> Home = &#123; <span class="attr">template</span>: <span class="string">'&lt;div&gt;This is Home&lt;/div&gt;'</span> &#125;</span><br><span class="line"><span class="keyword">const</span> Foo = &#123; <span class="attr">template</span>: <span class="string">'&lt;div&gt;This is Foo&lt;/div&gt;'</span> &#125;</span><br><span class="line"><span class="keyword">const</span> Bar = &#123; <span class="attr">template</span>: <span class="string">'&lt;div&gt;This is Bar &#123;&#123; $route.params.id &#125;&#125;&lt;/div&gt;'</span> &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> router = <span class="keyword">new</span> VueRouter(&#123;</span><br><span class="line">  mode: <span class="string">'history'</span>,</span><br><span class="line">  base: __dirname,</span><br><span class="line">  routes: [</span><br><span class="line">    &#123; <span class="attr">path</span>: <span class="string">'/'</span>, <span class="attr">name</span>: <span class="string">'home'</span>, <span class="attr">component</span>: Home &#125;,</span><br><span class="line">    &#123; <span class="attr">path</span>: <span class="string">'/foo'</span>, <span class="attr">name</span>: <span class="string">'foo'</span>, <span class="attr">component</span>: Foo &#125;,</span><br><span class="line">    &#123; <span class="attr">path</span>: <span class="string">'/bar/:id'</span>, <span class="attr">name</span>: <span class="string">'bar'</span>, <span class="attr">component</span>: Bar &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="keyword">new</span> Vue(&#123;</span><br><span class="line">  router,</span><br><span class="line">  template: <span class="string">`</span></span><br><span class="line"><span class="string">    &lt;div id="app"&gt;</span></span><br><span class="line"><span class="string">      &lt;h1&gt;Named Routes&lt;/h1&gt;</span></span><br><span class="line"><span class="string">      &lt;p&gt;Current route name: &#123;&#123; $route.name &#125;&#125;&lt;/p&gt; </span></span><br><span class="line"><span class="string">      &lt;ul&gt;</span></span><br><span class="line"><span class="string">        &lt;li&gt;&lt;router-link :to="&#123; name: 'home' &#125;"&gt;home&lt;/router-link&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">        &lt;li&gt;&lt;router-link :to="&#123; name: 'foo' &#125;"&gt;foo&lt;/router-link&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">        &lt;li&gt;&lt;router-link :to="&#123; name: 'bar', params: &#123; id: 123 &#125;&#125;"&gt;bar&lt;/router-link&gt;&lt;/li&gt;</span></span><br><span class="line"><span class="string">      &lt;/ul&gt;</span></span><br><span class="line"><span class="string">      &lt;router-view class="view"&gt;&lt;/router-view&gt;</span></span><br><span class="line"><span class="string">    &lt;/div&gt;</span></span><br><span class="line"><span class="string">  `</span></span><br><span class="line">&#125;).$mount(<span class="string">'#app'</span>)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>vue组件中的name属性</title>
+      <link href="/vue%E7%BB%84%E4%BB%B6%E4%B8%AD%E7%9A%84name/"/>
+      <url>/vue%E7%BB%84%E4%BB%B6%E4%B8%AD%E7%9A%84name/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/Uookic/article/details/80420472" target="_blank" rel="noopener">本文转自</a><br><a href="https://cn.vuejs.org/v2/api/#name" target="_blank" rel="noopener">官方文档</a></p><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>我们在写vue项目的时候会遇到给组件命名，这里的name非必选项，看起来好像没啥用处，但是实际上这里用处还挺多的<br>  <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">      name:<span class="string">'xxx'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h2 id="当项目使用keep-alive时，可搭配组件name进行缓存过滤"><a href="#当项目使用keep-alive时，可搭配组件name进行缓存过滤" class="headerlink" title="当项目使用keep-alive时，可搭配组件name进行缓存过滤"></a>当项目使用keep-alive时，可搭配组件name进行缓存过滤</h2><p>举个例子：我们有个组件命名为detail,其中dom加载完毕后我们在钩子函数mounted中进行数据加载<br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">export default &#123;</span><br><span class="line">  name:&#39;Detail&#39;</span><br><span class="line">&#125;，</span><br><span class="line">mounted()&#123;</span><br><span class="line">  this.getInfo();</span><br><span class="line">&#125;，</span><br><span class="line">methods:&#123;</span><br><span class="line">  getInfo()&#123;</span><br><span class="line">          axios.get(&#39;&#x2F;xx&#x2F;detail.json&#39;,&#123;</span><br><span class="line">              params:&#123;</span><br><span class="line">                id:this.$route.params.id  </span><br><span class="line">              &#125;</span><br><span class="line">          &#125;).then(this.getInfoSucc)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><br>  因为我们在App.vue中使用了keep-alive导致我们第二次进入的时候页面不会重新请求，即触发mounted函数。<br>  有两个解决方案,一个增加activated()函数,每次进入新页面的时候再获取一次数据。<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id&#x3D;&quot;app&quot;&gt; </span><br><span class="line">  &lt;keep-alive exclude&#x3D;&quot;Detail&quot;&gt;</span><br><span class="line">    &lt;router-view&#x2F;&gt;</span><br><span class="line">  &lt;&#x2F;keep-alive&gt;</span><br><span class="line">&lt;&#x2F;div&gt;</span><br></pre></td></tr></table></figure></p><h2 id="DOM做递归组件时"><a href="#DOM做递归组件时" class="headerlink" title="DOM做递归组件时"></a>DOM做递归组件时</h2><p> 比如说detail.vue组件里有个list.vue子组件，递归迭代时需要调用自身name<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">div&gt;</span><br><span class="line">         &lt;div v-for&#x3D;&quot;(item,index) of list&quot; :key&#x3D;&quot;index&quot;&gt;</span><br><span class="line">             &lt;div&gt;</span><br><span class="line">                 &lt;span class&#x3D;&quot;item-title-icon&quot;&gt;&lt;&#x2F;span&gt;</span><br><span class="line">                 &#123;&#123;item.title&#125;&#125;</span><br><span class="line">             &lt;&#x2F;div&gt;</span><br><span class="line">             &lt;div v-if&#x3D;&quot;item.children&quot; &gt;</span><br><span class="line">               &lt;detail-list :list&#x3D;&quot;item.children&quot;&gt;&lt;&#x2F;detail-list&gt;</span><br><span class="line">             &lt;&#x2F;div&gt;</span><br><span class="line">         &lt;&#x2F;div&gt;</span><br><span class="line">   &lt;&#x2F;div&gt;</span><br><span class="line"></span><br><span class="line"> &lt;script&gt;</span><br><span class="line"> export default &#123;</span><br><span class="line">     name:&#39;DetailList&#39;,&#x2F;&#x2F;递归组件是指组件自身调用自身</span><br><span class="line">     props:&#123;</span><br><span class="line">         list:Array</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br><span class="line"> &lt;&#x2F;script&gt;</span><br><span class="line"> list数据：</span><br><span class="line">   const list &#x3D; [&#123;</span><br><span class="line">           &quot;title&quot;: &quot;A&quot;,</span><br><span class="line">           &quot;children&quot;: [&#123;</span><br><span class="line">             &quot;title&quot;: &quot;A-A&quot;,</span><br><span class="line">             &quot;children&quot;: [&#123;</span><br><span class="line">               &quot;title&quot;: &quot;A-A-A&quot;</span><br><span class="line">             &#125;]</span><br><span class="line">           &#125;,&#123;</span><br><span class="line">                 &quot;title&quot;: &quot;A-B&quot;</span><br><span class="line">           &#125;]</span><br><span class="line">         &#125;, &#123;</span><br><span class="line">           &quot;title&quot;: &quot;B&quot;</span><br><span class="line">         &#125;, &#123;</span><br><span class="line">           &quot;title&quot;: &quot;C&quot;</span><br><span class="line">         &#125;, &#123;</span><br><span class="line">           &quot;title&quot;: &quot;D&quot;</span><br><span class="line">         &#125;]</span><br></pre></td></tr></table></figure><br> 迭代的结果如下：<br> <img src="https://img-blog.csdn.net/20180523152904570?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vvb2tpYw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt=""></p><h2 id="当你用vue-tools时"><a href="#当你用vue-tools时" class="headerlink" title="当你用vue-tools时"></a>当你用vue-tools时</h2><p> vue-devtools调试工具里显示的组见名称是由vue中组件name决定的<br> <img src="https://img-blog.csdn.net/20180523153448582?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1Vvb2tpYw==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt=""></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>MSBUILD : error MSB4132: 无法识别工具版本2.0。可用的工具版本为 14.0, 4.0。</title>
       <link href="/MSBUILD-error-MSB4132-%E6%97%A0%E6%B3%95%E8%AF%86%E5%88%AB%E5%B7%A5%E5%85%B7%E7%89%88%E6%9C%AC2-0%E3%80%82%E5%8F%AF%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E7%89%88%E6%9C%AC%E4%B8%BA-14-0-4-0%E3%80%82/"/>
       <url>/MSBUILD-error-MSB4132-%E6%97%A0%E6%B3%95%E8%AF%86%E5%88%AB%E5%B7%A5%E5%85%B7%E7%89%88%E6%9C%AC2-0%E3%80%82%E5%8F%AF%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E7%89%88%E6%9C%AC%E4%B8%BA-14-0-4-0%E3%80%82/</url>
