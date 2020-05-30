@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>width和height</title>
+      <link href="/width%E5%92%8Cheight/"/>
+      <url>/width%E5%92%8Cheight/</url>
+      
+        <content type="html"><![CDATA[<h2 id="width"><a href="#width" class="headerlink" title="width"></a>width</h2><ol><li>width的默认值是auto, 只要给块级元素设置了height值，没有设置width，子元素相对于父元素宽度自适应</li></ol><h2 id="height"><a href="#height" class="headerlink" title="height"></a>height</h2><ol><li>height的默认值是auto, 只要给块级元素设置了width值，没有设置height，子元素相对于父元素高度自适应</li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> css </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>mock设置</title>
       <link href="/mock%E8%AE%BE%E7%BD%AE/"/>
       <url>/mock%E8%AE%BE%E7%BD%AE/</url>
