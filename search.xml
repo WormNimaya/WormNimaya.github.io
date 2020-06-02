@@ -8,7 +8,7 @@
       <link href="/width%E5%92%8Cheight/"/>
       <url>/width%E5%92%8Cheight/</url>
       
-        <content type="html"><![CDATA[<h2 id="width"><a href="#width" class="headerlink" title="width"></a>width</h2><ol><li>width的默认值是auto, 只要给块级元素设置了height值，没有设置width，子元素相对于父元素宽度自适应</li></ol><h2 id="height"><a href="#height" class="headerlink" title="height"></a>height</h2><ol><li>height的默认值是auto, 如果没有内容，则值为0。子div脱离文档流后不会撑起父div宽高。</li></ol>]]></content>
+        <content type="html"><![CDATA[<h2 id="width"><a href="#width" class="headerlink" title="width"></a>width</h2><ol><li>width的默认值是auto, 只要给块级元素设置了height值，没有设置width，子元素相对于父元素宽度自适应。(如果父元素启动flex布局，子元素没有设置宽度，子元素将不有auto的属性特征，而是为0)</li></ol><h2 id="height"><a href="#height" class="headerlink" title="height"></a>height</h2><ol><li>height的默认值是auto, 如果没有内容，则值为0。子div脱离文档流后不会撑起父div宽高。(如果父元素启动flex布局，子元素没有设置高度，也会继承父元素的高度)</li></ol>]]></content>
       
       
       <categories>
