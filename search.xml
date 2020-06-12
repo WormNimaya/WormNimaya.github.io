@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>搭建电影网站</title>
+      <link href="/%E6%90%AD%E5%BB%BA%E7%94%B5%E5%BD%B1%E7%BD%91%E7%AB%99/"/>
+      <url>/%E6%90%AD%E5%BB%BA%E7%94%B5%E5%BD%B1%E7%BD%91%E7%AB%99/</url>
+      
+        <content type="html"><![CDATA[<p><strong>还在花钱购买vip追自己喜欢看的剧吗？ 还在为找不到电影资源苦恼吗？ 今天就让我们自己搭建一个电影网站吧！ 让我付费不可能的，永远是不可能的</strong></p><h2 id="什么是域名和虚拟主机"><a href="#什么是域名和虚拟主机" class="headerlink" title="什么是域名和虚拟主机"></a>什么是域名和虚拟主机</h2><p> 很多同学会有很大的疑问？ <strong>域名，虚拟主机</strong>，我靠什么是域名，虚拟主机又是什么，那我就给大家举个例子吧，让大家更容易理解，我们把互联网比作我们的世界，而虚拟主机就是我们的房子， 我们可以在虚拟主机里面搭建自己的网站项目，而域名就像是门牌号，有利于找到我们的家，也可以把域名理解为，我们访问的网址。</p><h2 id="域名"><a href="#域名" class="headerlink" title="域名"></a>域名</h2><p> 这里我为大家准备了两种方案，各有利弊吧</p><ol><li><p><a href="https://www.freenom.com/zh/freeandpaiddomains.html" target="_blank" rel="noopener">免费域名</a>，但是这种操作比较麻烦，如果小伙伴们嫌麻烦， 可以选择第二种。</p><ul><li>这里我们需要一个美国代理，如果不知道代理的请自行百度，把代理模式切换成全局模式</li><li>然后大家注册freeom这个网站，并登录，这里我给大家提供一个，<a href="https://www.linshiyouxiang.net/" target="_blank" rel="noopener">临时邮箱</a>，便于大家注册，我们把他调成英文页面</li><li>我们在面板中点击 Partners -&gt; Developers<br><img src="../image/move1.png" alt=""><br><img src="../image/move2.png" alt=""></li><li>这样我们进入了注册页面，在鼠标点击的位置填写临时邮箱<br><img src="../image/move3.png" alt=""></li><li>我们可以在google中搜索ip，查看自己的ip地址是否在美国，如果不在，请开启美国全局代理(不懂代理的请自行百度)<br><img src="../image/move4.png" alt=""></li><li>我们打开<a href="https://www.linshiyouxiang.net/" target="_blank" rel="noopener">临时邮箱</a>，把临时邮箱的地址填写到注册页面上<br><img src="../image/move5.png" alt=""><br><img src="../image/move6.png" alt=""></li><li>进入上面的页面后，进入临时邮箱，点击，进入主页<br><img src="../image/move7.png" alt=""></li><li>我们再一次在面板中点击 Partners -&gt; Developers<br><img src="../image/move1.png" alt=""><br><img src="../image/move2.png" alt=""></li><li>这次他会出现填写个人信息的模块， 这里的信息必须是美国人的真实信息，这里我为大家提供了，一个<a href="http://www.shenfendaquan.com/" target="_blank" rel="noopener">美国人信息的网站</a><br><img src="../image/move8.png" alt=""></li><li>将美国人的信息填写到表格中，(注意电话号的-要去掉)<br><img src="../image/move9.png" alt=""></li><li>出现这个页面，恭喜你注册成功了<br><img src="../image/move10.png" alt=""></li><li>现在我们就可以注册域名了<br><img src="../image/move11.png" alt=""></li><li>在搜索框中填写自己想要的域名，如果填写查找需要费用，请重新搜索自己喜欢的域名<br><img src="../image/move12.png" alt=""><br><img src="../image/move13.png" alt=""></li><li>加入购物车，点击checkout<br><img src="../image/move14.png" alt=""></li><li>选择时长，然后点击continue<br><img src="../image/move15.png" alt=""></li><li><img src="../image/move16.png" alt=""></li><li>点击蓝色按钮<br><img src="../image/move17.png" alt=""></li><li>到我们的主页查看我们购买的域名<br><img src="../image/move18.png" alt=""></li><li>域名购买完成<br><img src="../image/move19.png" alt=""></li></ul></li><li><p>到阿里旗下的<a href="https://wanwang.aliyun.com/" target="_blank" rel="noopener">万网</a>，购买一个域名，我建议大家买一个域名，这样大家的网站也有个保障，毕竟是阿里的嘛！！！</p></li></ol><h2 id="解析域名"><a href="#解析域名" class="headerlink" title="解析域名"></a>解析域名</h2><ol><li>这里推荐<a href="https://www.cloudflare.com/" target="_blank" rel="noopener">cloudflare</a><br>我在网上发现了一个文章写的特别好，<a href="https://zhuanlan.zhihu.com/p/82909515" target="_blank" rel="noopener">cloudflare使用入门教程，国外最好免费CDN</a>这里我就不自己写了</li></ol><h2 id="虚拟主机"><a href="#虚拟主机" class="headerlink" title="虚拟主机"></a>虚拟主机</h2><p> 下面用到的我分享到百度云盘中 链接：<a href="https://pan.baidu.com/s/1-NO_u3Lnrzm0uJE7Gi9VmQ" target="_blank" rel="noopener">https://pan.baidu.com/s/1-NO_u3Lnrzm0uJE7Gi9VmQ</a><br> 提取码：7p9v</p><ol><li>这里我推荐<a href="https://www.cccyun.net/" target="_blank" rel="noopener">彩虹云</a>, 因为有免费服务，适合于新手，自己注册一个账号，购买免费的就好</li></ol><h2 id="开始建造网站"><a href="#开始建造网站" class="headerlink" title="开始建造网站"></a>开始建造网站</h2><p> 上面的准备工作做完了，我们终于可以建站了</p><ol><li><p>登录彩虹面板， 点击前往控制面板 -&gt; 一键登录控制面板<br><img src="../image/move20.png" alt=""></p></li><li><p>绑定解析域名</p><blockquote><p>注意：这里的域名是解析后的域名</p></blockquote><p><img src="../image/move21.png" alt=""></p></li><li><p>点击文件管理 -&gt; 在线文件管理器，点击wwwroot，进入wwwroot目录<br><img src="../image/move22.png" alt=""></p><ul><li>点击上传文件，上传苹果cmsv10<br><img src="../image/move23.png" alt=""></li><li>上传成功后，进行解压，<br><img src="../image/move24.png" alt=""></li><li>进入解压的文件，将里面的文件夹全部选中，点击剪切，复制到wwwroot文件目录中，如图：粘贴正确<br><img src="../image/move25.png" alt=""></li><li>点击wwwroot文件下的template目录，进入目录后，进行上传模板文件，然后解压<br><img src="../image/move26.png" alt=""></li><li>在浏览器地址输入自己的域名，出现如图，点击同意协议并安装系统 -&gt; 点击进行下一步<br><img src="../image/move27.png" alt=""></li><li>数据库配置（这里的数据库名称，账号，密码，在虚拟主机控制面板 -》 数据库链接信息）,填写好信息后，点击测试数据连接，-》 立即执行安装<br><img src="../image/move28.png" alt=""></li><li>这时候等待三秒后，页面会出现请将后台入口文件admin.php改名，防止黑客攻击，进入wwwroot文件目录，修改admin.php文件名字(注意不能叫index.php,目录中有一个文件index.php)</li><li>在浏览器地址栏中，自己的域名/刚才修改的文件名字.php,回车,填写信息进行登录，进入后台管理系统<br><img src="../image/move29.png" alt=""><br><img src="../image/move30.png" alt=""></li><li>点击系统 -》 网站参数配置 -》修改网站名称-》 修改网站模板(选择conch) -》手机模板(选择conch)配置好后，点击保存<br><img src="../image/move31.png" alt=""></li><li>首页 -》自定义菜单配置中填写如下，然后点击保存，刷新页面，左侧导航栏会出现一个海螺模板，自行配置(可以用默认配置)<br><code>海螺模板,/这里是你自己定义的文件名.php/admin/conch/theme.html</code></li><li>采集 -》自定义采集 -》添加(采集地址云盘中有) -》点击保存<br><img src="../image/move32.png" alt=""></li><li>点击资源站下面的链接, 进行绑定，绑定喜欢的资源后，点击采集所有，等待采集完毕<br><img src="../image/move33.png" alt=""></li><li>添加播放器，你进入你采集的网站里，下载相应的播放器，在视频 -》 播放器-》进行导入播放器，然后点击清理缓存(注意：必须视频采集完后，才能点击)<br><img src="../image/move34.png" alt=""></li><li>建造电影网站完毕</li></ul></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> moive </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Vue props用法详解</title>
       <link href="/Vue-props%E7%94%A8%E6%B3%95%E8%AF%A6%E8%A7%A3/"/>
       <url>/Vue-props%E7%94%A8%E6%B3%95%E8%AF%A6%E8%A7%A3/</url>
