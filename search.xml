@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>element弹空标签问题</title>
+      <link href="/element%E5%BC%B9%E7%A9%BA%E6%A0%87%E7%AD%BE%E9%97%AE%E9%A2%98/"/>
+      <url>/element%E5%BC%B9%E7%A9%BA%E6%A0%87%E7%AD%BE%E9%97%AE%E9%A2%98/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://blog.csdn.net/weixin_43124082/article/details/84328327" target="_blank" rel="noopener">文章转自</a></p><h1 id="使用element的Message控件，页面刷新时弹出空的提示消息"><a href="#使用element的Message控件，页面刷新时弹出空的提示消息" class="headerlink" title="使用element的Message控件，页面刷新时弹出空的提示消息"></a>使用element的Message控件，页面刷新时弹出空的提示消息</h1><p>  使用element的Message控件时，引入Message后会有如下问题：<br>  <img src="https://img-blog.csdnimg.cn/20181121190624357.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MzEyNDA4Mg==,size_16,color_FFFFFF,t_70" alt=""></p><p>  如图所示：在页面刷新时，会有一条空的消息提示弹出</p><h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><p> 将<code>Vue.use(Message)</code>改为<code>Vue.component(Message.name, Message)</code>即可</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vue实现吸顶功能</title>
       <link href="/vue%E5%AE%9E%E7%8E%B0%E5%90%B8%E9%A1%B6%E5%8A%9F%E8%83%BD/"/>
       <url>/vue%E5%AE%9E%E7%8E%B0%E5%90%B8%E9%A1%B6%E5%8A%9F%E8%83%BD/</url>
