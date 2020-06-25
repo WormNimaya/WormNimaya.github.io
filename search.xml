@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>vue-router的懒加载</title>
+      <link href="/vue-router%E7%9A%84%E6%87%92%E5%8A%A0%E8%BD%BD/"/>
+      <url>/vue-router%E7%9A%84%E6%87%92%E5%8A%A0%E8%BD%BD/</url>
+      
+        <content type="html"><![CDATA[<h1 id="vue-router的懒加载"><a href="#vue-router的懒加载" class="headerlink" title="vue-router的懒加载"></a>vue-router的懒加载</h1><h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>  安装babel的<code>syntax-dynamic-import</code>插件<br>  <figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save-dev @babel/plugin-syntax-dynamic-import</span><br></pre></td></tr></table></figure><br>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">export default new Router(&#123;</span><br><span class="line">  routes:[</span><br><span class="line">    &#123;</span><br><span class="line">      path: &#39;&#x2F;login&#39;,</span><br><span class="line">      name: &#39;login&#39;,</span><br><span class="line">      component: () &#x3D;&gt; import(&#39;.&#x2F;pages&#x2F;login.vue&#39;)</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p><h2 id="方式二"><a href="#方式二" class="headerlink" title="方式二"></a>方式二</h2>  <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">export default new Router(&#123;</span><br><span class="line">  routes:[</span><br><span class="line">    &#123;</span><br><span class="line">      path: &#39;&#x2F;login&#39;,</span><br><span class="line">      name: &#39;login&#39;,</span><br><span class="line">      component: resolve &#x3D;&gt; require([&#39;.&#x2F;pages&#x2F;login.vue&#39;], resolve)</span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>javaScript</title>
       <link href="/javaScript/"/>
       <url>/javaScript/</url>
