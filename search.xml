@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>viewport</title>
+      <link href="/viewport/"/>
+      <url>/viewport/</url>
+      
+        <content type="html"><![CDATA[<p><a href="https://www.jianshu.com/p/7ef03682016d" target="_blank" rel="noopener">文章转自</a></p><h1 id="为什么要使用viewport"><a href="#为什么要使用viewport" class="headerlink" title="为什么要使用viewport"></a>为什么要使用viewport</h1><p>手机有不同的分辨率，不同的屏幕大小，如何使我们开发应用或页面大小适合各种高低端手机的使用？学习html5的  viewport技术能够帮助我们实现这一点；</p><h1 id="viewport是什么？"><a href="#viewport是什么？" class="headerlink" title="viewport是什么？"></a>viewport是什么？</h1><p>首先来介绍一下，什么是viewport技术：viewport技术就是适配屏幕像素密度的技术；在css中，1px单位在像素密度越大的设备上表现的实际尺寸就越小。为了保证尺寸不失真，一般会在屏幕密度可选性较多的移动设备中来使用viewport技术，让同一套样式在不同密度设备中表现一致。</p><h1 id="viewport的使用"><a href="#viewport的使用" class="headerlink" title="viewport的使用"></a>viewport的使用</h1><p>viewport技术需要使用元信息标签来实现；</p><p>说了这么多，下面直接上代码，可以将下面代码写入一个html页面中，将代码运行在移动端来进行测试：</p><ol><li><p>一般，页面准许用户缩放时，使用以下设置，在移动端两手指捏合触发的事件</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> </span></span><br><span class="line"><span class="tag">      <span class="attr">content</span>=<span class="string">"width=device-width,</span></span></span><br><span class="line"><span class="tag"><span class="string">      maximum-scale=10,</span></span></span><br><span class="line"><span class="tag"><span class="string">      initial-scale=1,</span></span></span><br><span class="line"><span class="tag"><span class="string">      minimum-scale=1,</span></span></span><br><span class="line"><span class="tag"><span class="string">      user-scalable=yes"</span></span></span><br><span class="line"><span class="tag">&gt;</span></span><br></pre></td></tr></table></figure></li><li><p>不准许用户缩放页面，使用以下设置</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> </span></span><br><span class="line"><span class="tag">      <span class="attr">content</span>=<span class="string">"width=device-width,</span></span></span><br><span class="line"><span class="tag"><span class="string">      maximum-scale=1,</span></span></span><br><span class="line"><span class="tag"><span class="string">      minimum-scale=1,</span></span></span><br><span class="line"><span class="tag"><span class="string">      initial-scale=1,</span></span></span><br><span class="line"><span class="tag"><span class="string">      user-scalable=no"</span></span></span><br><span class="line"><span class="tag">&gt;</span></span><br></pre></td></tr></table></figure></li></ol><h1 id="属性的含义以及该如何设置"><a href="#属性的含义以及该如何设置" class="headerlink" title="属性的含义以及该如何设置"></a>属性的含义以及该如何设置</h1><ul><li>width:设置的是展示页面的视口（viewport）的宽度，一般不需要指定数值，让浏览器根据设备的实际宽度设置为自己的宽度即可；</li><li>maximum-scale:设置页面的放大倍数，取值范围：0.25——10.0；一般取值为：5、8、10；</li><li>initial-scale:初始化页面放大倍率，取值范围：0.25——10.0；一般取值为：1；</li><li>minimum-scale:设置页面的缩小倍数，取值范围：0.25——10.0，一般取值和initial-scale一致；<br>（以上三个属性互相配合使用，initial==mini&lt;=max）；</li><li>user-scalable:设置用户是否可以缩放页面：默认：yes(1)；或者no（0）；</li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 移动端 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>项目部署宝塔面板</title>
       <link href="/vue%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/"/>
       <url>/vue%E9%A1%B9%E7%9B%AE%E9%83%A8%E7%BD%B2%E5%AE%9D%E5%A1%94%E9%9D%A2%E6%9D%BF/</url>
