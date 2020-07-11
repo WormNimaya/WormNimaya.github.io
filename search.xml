@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>webpack4</title>
+      <link href="/webpack4/"/>
+      <url>/webpack4/</url>
+      
+        <content type="html"><![CDATA[<h1 id="webpack是什么"><a href="#webpack是什么" class="headerlink" title="webpack是什么"></a>webpack是什么</h1><p>  <strong>webpack是模块打包工具</strong>，它可以打包<code>ES6</code>的模块引入方式、<code>CommonJS</code>模块引入方式、<code>CMD</code>、<code>AMD</code>, 通俗的说<code>webpack</code>就是把多个文件打包成一个文件的工具，他并不能称为代码解析工具，高级语法webpack自身不识别，它只是一个模块打包工具。随着<code>webpack</code>的发展，<code>webapck</code>不仅能打包<code>js文件</code>了，也可以打包<code>css样式</code>，<code>图</code>片等</p><h1 id="为什么要使用webpack"><a href="#为什么要使用webpack" class="headerlink" title="为什么要使用webpack"></a>为什么要使用webpack</h1><p>  在原来的模式中，在<code>index.html</code>中，我们需要引入多个<code>js文件</code>，并且要考虑<code>js文件</code>的先后顺序，这使得我们项目难以维护，同时加大了浏览器负载。通过<code>wenpack</code>进行打包构建，我们的只用在<code>index.hmtl</code>中引入一个<code>js文件</code>，帮助我们很好的解决了上面的问题，更加适合于大型项目的应用。</p><h1 id="安装webpack"><a href="#安装webpack" class="headerlink" title="安装webpack"></a>安装webpack</h1><ol><li>全局安装<ul><li>我们并不推荐全局安装<code>webpack</code>，这会是我们对<code>webpack</code>的使用具有局限性，我们在不同的项目中需要使用不同版本的<code>webpack</code>，如果全局安装了webpack，这会对项目造成麻烦<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack webpack-cli -g</span><br></pre></td></tr></table></figure></li></ul></li><li>局部安装<ul><li>推荐方案<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install webpack webpack-cli -D</span><br></pre></td></tr></table></figure></li></ul></li><li>npx<br>在项目中执行命令，优先会到全局查找执行命令，如果全局没有这个命令，就会报错，不会执行局部命令， 这时候我们可以在要执行的命令前面<code>加上npx</code>，就可以解决问题。</li><li><code>npm info webpack</code> 查看<code>webpack</code>所有版本</li><li><strong>package.json</strong> 文件中的 <code>script</code><ul><li>在script可以配置npm的执行命令，这个命令查找是局部命令。以后可以通过npm run 自己设置的名称 就可以执行 命令了。<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">"scripts": &#123;</span><br><span class="line">  "bundle" : "webpack"</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure></li></ul></li></ol><h1 id="webpack-config-js"><a href="#webpack-config-js" class="headerlink" title="webpack.config.js"></a>webpack.config.js</h1><ol><li>webpack.config.js 是webpack默认的执行文件，执行webapck命令的时候，webpack会首先到这个配置文件查看如何进行打包构建。</li><li>在webpack.config.js可以进行webpack的配置</li><li>修改配置文件名字为webpackconfig.js，执行配置文件可以如下执行：<ul><li>我们不建议修改webpack.config.js文件名字吗，修改后每次执行都要执行下面的代码<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npx webpack --config webpackconfig.js</span><br></pre></td></tr></table></figure></li></ul></li></ol><h1 id="entry"><a href="#entry" class="headerlink" title="entry"></a>entry</h1><p> 设置打包文件的入口文件，不需要绝对路径<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">    entry: &#39;.&#x2F;src&#x2F;index.js&#39;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p><h1 id="output"><a href="#output" class="headerlink" title="output"></a>output</h1><p> 设置打包文件的路径和文件名，默认是dist/main.js，需要绝对路径<br> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">const path &#x3D; require(&#39;path&#39;)</span><br><span class="line"></span><br><span class="line"> module.exports &#x3D; &#123;</span><br><span class="line">     output: &#123;</span><br><span class="line">         filename: &quot;bundle.js&quot;,</span><br><span class="line">         path: path.resolve(__dirname, &#39;bundle&#39;)</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p><h1 id="mode"><a href="#mode" class="headerlink" title="mode"></a>mode</h1><p> 这个属性是设置webpack在那种环境下运行：</p><ul><li>production 生产环境下运行，打包后的代码不会进行压缩</li><li>development 开发环境下运行，打包后的代码不会进行压缩<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">module.exports &#x3D; &#123;</span><br><span class="line">  mode: &#39;production&#39;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> webpack </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>viewport</title>
       <link href="/viewport/"/>
       <url>/viewport/</url>
@@ -790,7 +815,7 @@
     
     
     <entry>
-      <title>ES6的export和export default</title>
+      <title>ES6的import和export和export default</title>
       <link href="/Es6%E7%9A%84export%E5%92%8Cexport-default/"/>
       <url>/Es6%E7%9A%84export%E5%92%8Cexport-default/</url>
       
