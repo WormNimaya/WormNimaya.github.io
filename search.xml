@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>小程序</title>
+      <link href="/%E5%B0%8F%E7%A8%8B%E5%BA%8F/"/>
+      <url>/%E5%B0%8F%E7%A8%8B%E5%BA%8F/</url>
+      
+        <content type="html"><![CDATA[<h1 id="微信⼩程序介绍"><a href="#微信⼩程序介绍" class="headerlink" title="微信⼩程序介绍"></a>微信⼩程序介绍</h1><p> 微信⼩程序，简称⼩程序，英⽂名 Mini Program ，是⼀种不需要下载安装即可使⽤的应⽤，它实现 了应⽤“触⼿可及”的梦想，⽤⼾扫⼀扫或搜⼀下即可打开应⽤</p><h1 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h1><p> 开发微信⼩程序之前，必须要准备好相应的环境</p><h2 id="注册账号"><a href="#注册账号" class="headerlink" title="注册账号"></a>注册账号</h2><p> 建议使用全新的邮箱，没有注册过其他小程序或者公众号的。访问<a href="https://mp.weixin.qq.com/wxopen/waregister?action=step1" target="_blank" rel="noopener">注册⻚⾯</a>，耐⼼完成注册即可。</p><h2 id="获取APPID"><a href="#获取APPID" class="headerlink" title="获取APPID"></a>获取APPID</h2><p> 由于后期调⽤微信⼩程序的接⼝等功能，需要索取开发者的⼩程序中的 APPID ，所以在注册成功后， 可登录，然后获取APPID。</p><p> <a href="https://mp.weixin.qq.com/wxamp/home/guide?lang=zh_CN&token=1571393054" target="_blank" rel="noopener">登录</a>，成功后可看到如下界⾯</p><p> 然后复制你的APPID,悄悄的保存起来，不要给别⼈看到😄。<br> <img src="../image/xiao1.png" alt=""><br> <img src="../image/xiao2.png" alt=""></p><h2 id="开发⼯具"><a href="#开发⼯具" class="headerlink" title="开发⼯具"></a>开发⼯具</h2><p> <a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html" target="_blank" rel="noopener">下载地址</a></p><p> <img src="../image/xiao3.png" alt=""><br> 微信⼩程序⾃带开发者⼯具，集 <code>开发</code> <code>预览</code> <code>调试</code> <code>发布</code> 于⼀⾝的 完整环境。</p><p> 但是由于编码的体验不算好，因此 建议使⽤ <code>vs code</code> + <code>微信小程序编辑工具</code> 来实现编码</p><p> <code>vs code</code> 负责敲代码， <code>微信编辑工具</code>负责预览</p><h1 id="第⼀个微信⼩程序"><a href="#第⼀个微信⼩程序" class="headerlink" title="第⼀个微信⼩程序"></a>第⼀个微信⼩程序</h1><h2 id="打开微信开发者⼯具"><a href="#打开微信开发者⼯具" class="headerlink" title="打开微信开发者⼯具"></a>打开微信开发者⼯具</h2><p> 注意 第⼀次登录的时候 需要扫码登录<br> <img src="../image/xiao4.png" alt=""></p><h2 id="新建⼩程序项⽬"><a href="#新建⼩程序项⽬" class="headerlink" title="新建⼩程序项⽬"></a>新建⼩程序项⽬</h2><p> <img src="../image/xiao5.png" alt=""></p><h2 id="填写项⽬信息"><a href="#填写项⽬信息" class="headerlink" title="填写项⽬信息"></a>填写项⽬信息</h2><p> <img src="../image/xiao6.png" alt=""></p><h2 id="成功"><a href="#成功" class="headerlink" title="成功"></a>成功</h2><p> <img src="../image/xiao3.png" alt=""></p><h1 id="微信开发者⼯具介绍"><a href="#微信开发者⼯具介绍" class="headerlink" title="微信开发者⼯具介绍"></a>微信开发者⼯具介绍</h1><p> 详细的使⽤，可以查看<a href="https://developers.weixin.qq.com/miniprogram/dev/devtools/devtools.html" target="_blank" rel="noopener">官⽹</a></p><p> <img src="../image/xiao7.png" alt=""></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 前端 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 小程序 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>TypeScript</title>
       <link href="/TypeScript/"/>
       <url>/TypeScript/</url>
